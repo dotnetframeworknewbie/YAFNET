@@ -2033,6 +2033,9 @@
     <Content Include="error.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Avatars\Common\SampleAvatar.gif" />
+    <Content Include="Images\Categories\categoryImageSample.gif" />
+    <Content Include="Images\Forums\forumImageSample.gif" />
+    <Content Include="Images\Logos\YAFLogo.svg" />
     <Content Include="Images\Medals\award_star_bronze_3.png" />
     <Content Include="Images\Medals\award_star_bronze_3_small.png" />
     <Content Include="Images\Medals\award_star_gold_2.png" />
@@ -2055,7 +2058,6 @@
     <Content Include="Images\Medals\medal_silver_2.png" />
     <Content Include="Images\Medals\medal_silver_2_small.png" />
     <Content Include="Images\Medals\medal_small.png" />
-    <Content Include="Images\Logos\YAFLogo.svg" />
     <Content Include="Images\noavatar.svg" />
     <Content Include="install\custom\custom.sql" />
     <Content Include="install\custom\dnn.sql" />
@@ -2086,8 +2088,6 @@
     <Content Include="Pages\admin\deleteforum.ascx" />
     <Content Include="Pages\admin\spamwords.ascx" />
     <Content Include="Dialogs\SpamWordsImport.ascx" />
-    <Content Include="Images\Categories\categoryImageSample.gif" />
-    <Content Include="Images\Forums\forumImageSample.gif" />
     <Content Include="install\BBCodeExtensions.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -3384,10 +3384,20 @@
     <Content Include="v1.9.1.upgrade.web.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="web.config">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="YetAnotherForum.NET.snk" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Deploy.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Package.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ServiceStack\ServiceStack.Text\ServiceStack.Text.csproj">
@@ -3724,7 +3734,7 @@ RD /S /Q "$(TargetDir)zh-TW\"</PostBuildEvent>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties compilerconfig_1json__JSONSchema="" bundleconfig_1json__JSONSchema="" />
+      <UserProperties bundleconfig_1json__JSONSchema="" compilerconfig_1json__JSONSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets" Condition="Exists('..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets')" />

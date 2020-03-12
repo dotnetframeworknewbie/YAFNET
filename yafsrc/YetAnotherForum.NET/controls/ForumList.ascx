@@ -29,6 +29,10 @@
                     </asp:Label>
                     <YAF:ForumModeratorList ID="ForumModeratorListMob" Visible="false" runat="server"  />
                 </h5>
+               <em>
+                  <%# ((System.Data.DataRow)Container.DataItem)["Description"] %>
+               </em>
+                  
                 <YAF:ForumSubForumList ID="SubForumList" runat="server"
                                        DataSource="<%# this.GetSubForums((System.Data.DataRow)Container.DataItem ) %>"
                                        Visible="<%# this.HasSubForums((System.Data.DataRow)Container.DataItem) %>" />
